@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		4E84E47929CB5253007D72C9 /* LittleLemon_FoodOrderingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E47829CB5253007D72C9 /* LittleLemon_FoodOrderingApp.swift */; };
-		4E84E47B29CB5253007D72C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E47A29CB5253007D72C9 /* ContentView.swift */; };
 		4E84E47D29CB5255007D72C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E84E47C29CB5255007D72C9 /* Assets.xcassets */; };
 		4E84E48029CB5255007D72C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E84E47F29CB5255007D72C9 /* Preview Assets.xcassets */; };
+		4E84E48729CB827E007D72C9 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E48629CB827E007D72C9 /* Onboarding.swift */; };
+		4E84E48929CB8869007D72C9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E48829CB8869007D72C9 /* Home.swift */; };
+		4E84E48B29CB88A8007D72C9 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E48A29CB88A8007D72C9 /* Menu.swift */; };
+		4E84E48D29CB94E9007D72C9 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E48C29CB94E9007D72C9 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E84E47529CB5253007D72C9 /* LittleLemon_FoodOrdering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleLemon_FoodOrdering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E84E47829CB5253007D72C9 /* LittleLemon_FoodOrderingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemon_FoodOrderingApp.swift; sourceTree = "<group>"; };
-		4E84E47A29CB5253007D72C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E84E47C29CB5255007D72C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E84E47F29CB5255007D72C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4E84E48629CB827E007D72C9 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		4E84E48829CB8869007D72C9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4E84E48A29CB88A8007D72C9 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		4E84E48C29CB94E9007D72C9 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +57,13 @@
 		4E84E47729CB5253007D72C9 /* LittleLemon_FoodOrdering */ = {
 			isa = PBXGroup;
 			children = (
+				4E84E48829CB8869007D72C9 /* Home.swift */,
+				4E84E48A29CB88A8007D72C9 /* Menu.swift */,
 				4E84E47829CB5253007D72C9 /* LittleLemon_FoodOrderingApp.swift */,
-				4E84E47A29CB5253007D72C9 /* ContentView.swift */,
+				4E84E48629CB827E007D72C9 /* Onboarding.swift */,
 				4E84E47C29CB5255007D72C9 /* Assets.xcassets */,
 				4E84E47E29CB5255007D72C9 /* Preview Content */,
+				4E84E48C29CB94E9007D72C9 /* UserProfile.swift */,
 			);
 			path = LittleLemon_FoodOrdering;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E84E47B29CB5253007D72C9 /* ContentView.swift in Sources */,
+				4E84E48729CB827E007D72C9 /* Onboarding.swift in Sources */,
+				4E84E48929CB8869007D72C9 /* Home.swift in Sources */,
+				4E84E48D29CB94E9007D72C9 /* UserProfile.swift in Sources */,
+				4E84E48B29CB88A8007D72C9 /* Menu.swift in Sources */,
 				4E84E47929CB5253007D72C9 /* LittleLemon_FoodOrderingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
