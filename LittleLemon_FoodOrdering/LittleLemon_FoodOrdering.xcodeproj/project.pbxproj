@@ -14,6 +14,11 @@
 		4E84E48929CB8869007D72C9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E48829CB8869007D72C9 /* Home.swift */; };
 		4E84E48B29CB88A8007D72C9 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E48A29CB88A8007D72C9 /* Menu.swift */; };
 		4E84E48D29CB94E9007D72C9 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84E48C29CB94E9007D72C9 /* UserProfile.swift */; };
+		4ECEC80B29CC4EBB00ADAE15 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC80929CC4EBB00ADAE15 /* FetchedObjects.swift */; };
+		4ECEC80C29CC4EBB00ADAE15 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC80A29CC4EBB00ADAE15 /* Persistence.swift */; };
+		4ECEC80E29CC4F7D00ADAE15 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC80D29CC4F7D00ADAE15 /* MenuList.swift */; };
+		4ECEC81029CC4F9B00ADAE15 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC80F29CC4F9B00ADAE15 /* MenuItem.swift */; };
+		4ECEC81329CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC81129CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		4E84E48829CB8869007D72C9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4E84E48A29CB88A8007D72C9 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		4E84E48C29CB94E9007D72C9 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		4ECEC80929CC4EBB00ADAE15 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		4ECEC80A29CC4EBB00ADAE15 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4ECEC80D29CC4F7D00ADAE15 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		4ECEC80F29CC4F9B00ADAE15 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		4ECEC81229CCDF3800ADAE15 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +67,12 @@
 		4E84E47729CB5253007D72C9 /* LittleLemon_FoodOrdering */ = {
 			isa = PBXGroup;
 			children = (
+				4ECEC80929CC4EBB00ADAE15 /* FetchedObjects.swift */,
+				4ECEC80A29CC4EBB00ADAE15 /* Persistence.swift */,
+				4ECEC80D29CC4F7D00ADAE15 /* MenuList.swift */,
+				4ECEC80F29CC4F9B00ADAE15 /* MenuItem.swift */,
 				4E84E48829CB8869007D72C9 /* Home.swift */,
+				4ECEC81129CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld */,
 				4E84E48A29CB88A8007D72C9 /* Menu.swift */,
 				4E84E47829CB5253007D72C9 /* LittleLemon_FoodOrderingApp.swift */,
 				4E84E48629CB827E007D72C9 /* Onboarding.swift */,
@@ -148,7 +163,12 @@
 			files = (
 				4E84E48729CB827E007D72C9 /* Onboarding.swift in Sources */,
 				4E84E48929CB8869007D72C9 /* Home.swift in Sources */,
+				4ECEC80E29CC4F7D00ADAE15 /* MenuList.swift in Sources */,
+				4ECEC80B29CC4EBB00ADAE15 /* FetchedObjects.swift in Sources */,
+				4ECEC80C29CC4EBB00ADAE15 /* Persistence.swift in Sources */,
+				4ECEC81329CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld in Sources */,
 				4E84E48D29CB94E9007D72C9 /* UserProfile.swift in Sources */,
+				4ECEC81029CC4F9B00ADAE15 /* MenuItem.swift in Sources */,
 				4E84E48B29CB88A8007D72C9 /* Menu.swift in Sources */,
 				4E84E47929CB5253007D72C9 /* LittleLemon_FoodOrderingApp.swift in Sources */,
 			);
@@ -349,6 +369,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4ECEC81129CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4ECEC81229CCDF3800ADAE15 /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = 4ECEC81229CCDF3800ADAE15 /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4E84E46D29CB5253007D72C9 /* Project object */;
 }
