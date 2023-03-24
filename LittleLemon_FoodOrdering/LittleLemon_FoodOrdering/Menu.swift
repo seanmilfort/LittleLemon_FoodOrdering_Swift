@@ -14,10 +14,18 @@ struct Menu: View {
     
     var body: some View {
         VStack{
-            Text("Little Lemon Restaurant")
-            Text("Chicago")
-            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
-            TextField("Search menu", text: $searchText)
+            Hero()
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Little Lemon").foregroundColor(Color(red: 0.5191, green: 0.4383, blue: 0.00426)).font(.system(size:40)).padding(.horizontal, 10)
+                HStack {
+                    VStack(alignment: .leading){
+                        Text("Chicago").foregroundColor(Color.white).font(.system(size: 20)).padding(.leading, 10).padding(.bottom, 10)
+                        Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.").padding(.leading, 10)
+                    }
+                    Image("sample-food").resizable().aspectRatio(contentMode: .fit).cornerRadius(15).frame(width: 175, height: 150)
+                }
+                TextField("Search menu", text: $searchText).textFieldStyle(RoundedBorderTextFieldStyle()).padding(10)
+            }.background(Color(red: 0.2874, green: 0.3701, blue: 0.3425)).frame(alignment: .leading)
             FetchedObjects(predicate: buildPredicate(),sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List {
                     if dishes.count != 0 {
@@ -33,10 +41,13 @@ struct Menu: View {
                     }
                 }
             }
-        }.onAppear{getMenuData()}
+        }.onAppear{
+            getMenuData()
+        }
     }
     
     func getMenuData() {
+        
         PersistenceController.shared.clear()
         
         let url = "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json"
@@ -59,8 +70,9 @@ struct Menu: View {
                 
             }
         }
-            task.resume()
-        }
+        task.resume()
+    }
+            
     
     func buildSortDescriptors () -> [NSSortDescriptor] {
         return [NSSortDescriptor (key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare))]

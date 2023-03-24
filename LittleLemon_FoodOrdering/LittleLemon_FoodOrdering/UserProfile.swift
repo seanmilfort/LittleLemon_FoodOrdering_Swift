@@ -17,6 +17,7 @@ struct UserProfile: View {
     
     var body: some View {
         VStack{
+            Hero()
             Text("Personal information")
             Image("profile-image-placeholder")
             Text(userFirstName)

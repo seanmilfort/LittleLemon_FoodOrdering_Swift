@@ -19,6 +19,7 @@
 		4ECEC80E29CC4F7D00ADAE15 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC80D29CC4F7D00ADAE15 /* MenuList.swift */; };
 		4ECEC81029CC4F9B00ADAE15 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC80F29CC4F9B00ADAE15 /* MenuItem.swift */; };
 		4ECEC81329CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC81129CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld */; };
+		4ECEC81529CD24B500ADAE15 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC81429CD24B500ADAE15 /* Hero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		4ECEC80D29CC4F7D00ADAE15 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		4ECEC80F29CC4F9B00ADAE15 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		4ECEC81229CCDF3800ADAE15 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		4ECEC81429CD24B500ADAE15 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				4E84E47C29CB5255007D72C9 /* Assets.xcassets */,
 				4E84E47E29CB5255007D72C9 /* Preview Content */,
 				4E84E48C29CB94E9007D72C9 /* UserProfile.swift */,
+				4ECEC81429CD24B500ADAE15 /* Hero.swift */,
 			);
 			path = LittleLemon_FoodOrdering;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				4ECEC80B29CC4EBB00ADAE15 /* FetchedObjects.swift in Sources */,
 				4ECEC80C29CC4EBB00ADAE15 /* Persistence.swift in Sources */,
 				4ECEC81329CCDF3800ADAE15 /* ExampleDatabase.xcdatamodeld in Sources */,
+				4ECEC81529CD24B500ADAE15 /* Hero.swift in Sources */,
 				4E84E48D29CB94E9007D72C9 /* UserProfile.swift in Sources */,
 				4ECEC81029CC4F9B00ADAE15 /* MenuItem.swift in Sources */,
 				4E84E48B29CB88A8007D72C9 /* Menu.swift in Sources */,
