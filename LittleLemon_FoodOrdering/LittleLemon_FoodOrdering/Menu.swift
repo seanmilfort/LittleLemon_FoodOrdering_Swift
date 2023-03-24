@@ -30,13 +30,19 @@ struct Menu: View {
                 List {
                     if dishes.count != 0 {
                         ForEach(dishes, id: \.self) { dish in
-                            HStack{
-                                Text(dish.title! + " " + dish.price!)
-                                AsyncImage(url: URL(string: dish.image!)) {image in image.resizable().frame(width: 100, height: 100)
-                                } placeholder: {
-                                    ProgressView()
+                                HStack{
+                                    VStack (alignment: .leading){
+                                        Text(dish.title!).font(Font.headline.weight(.bold))
+                                        Spacer()
+                                        Text("$" + dish.price!)
+                                    }
+                                    Spacer()
+                                    AsyncImage(url: URL(string: dish.image!)) {image in image.resizable().aspectRatio(contentMode: .fit).frame(width: 150, height: 100)
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
                                 }
-                            }
+                            
                         }
                     }
                 }
