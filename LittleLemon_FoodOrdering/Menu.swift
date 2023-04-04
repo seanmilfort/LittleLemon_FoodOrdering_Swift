@@ -12,6 +12,12 @@ struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var searchText = ""
     
+    @State var starters = true
+    @State var desserts = true
+    @State var drinks = true
+    @State var mains = true
+    
+    
     var body: some View {
         VStack{
             Hero()
@@ -26,6 +32,15 @@ struct Menu: View {
                 }
                 TextField("Search menu", text: $searchText).textFieldStyle(RoundedBorderTextFieldStyle()).padding(10)
             }.background(Color(red: 0.2874, green: 0.3701, blue: 0.3425)).frame(alignment: .leading)
+            Text("Order for Delivery!").frame(alignment: .leading)
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(spacing:10) {
+                    Toggle("Starters", isOn: $starters).toggleStyle(.button).tint(.blue).padding(.leading, 10)
+                    Toggle("Mains", isOn: $mains).toggleStyle(.button).tint(.blue)
+                    Toggle("Drinks", isOn: $drinks).toggleStyle(.button).tint(.blue)
+                    Toggle("Desserts", isOn: $desserts).toggleStyle(.button).tint(.blue)
+                }
+            }
             FetchedObjects(predicate: buildPredicate(),sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List {
                     if dishes.count != 0 {
@@ -70,6 +85,7 @@ struct Menu: View {
                         dish.title = menuItem.title
                         dish.price = menuItem.price
                         dish.image = menuItem.image
+                        dish.category = menuItem.category
                     }
                     try? viewContext.save()
                 }
@@ -84,14 +100,18 @@ struct Menu: View {
         return [NSSortDescriptor (key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare))]
     }
     
-    func buildPredicate() -> NSPredicate {
-        if searchText.isEmpty {
-            return NSPredicate(value: true)
-        } else {
-            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+    func buildPredicate() ->
+            NSCompoundPredicate {
+                    let search = searchText == "" ? NSPredicate(value: true) : NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+                    let starters = !starters ? NSPredicate(format: "category != %@", "starters") : NSPredicate(value: true)
+                    let mains = !mains ? NSPredicate(format: "category != %@", "mains") : NSPredicate(value: true)
+                    let desserts = !desserts ? NSPredicate(format: "category != %@", "desserts") : NSPredicate(value: true)
+                    let drinks = !drinks ? NSPredicate(format: "category != %@", "drinks") : NSPredicate(value: true)
+
+                    let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [search, starters, mains, desserts, drinks])
+                    return compoundPredicate
+                }
         }
-    }
-}
     
 
 struct Menu_Previews: PreviewProvider {
